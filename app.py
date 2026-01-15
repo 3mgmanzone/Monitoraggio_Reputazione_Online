@@ -42,4 +42,8 @@ riscontro = gr.Interface(
 
 if __name__ == "__main__":
     # Rimuoviamo i parametri fissi e lasciamo che legga l'ambiente
-    riscontro.launch()
+    riscontro.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 8080)),
+        show_error=True
+    )

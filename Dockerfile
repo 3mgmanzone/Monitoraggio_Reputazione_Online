@@ -6,8 +6,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 ENV GRADIO_SERVER_NAME="0.0.0.0"
-ENV GRADIO_SERVER_PORT=8080
 ENV GRADIO_ALLOW_FLAGGING="never"
+ENV PORT=8080
 
 EXPOSE 8080
 CMD ["python", "app.py"]
