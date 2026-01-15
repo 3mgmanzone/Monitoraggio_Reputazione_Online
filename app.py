@@ -41,5 +41,10 @@ riscontro = gr.Interface(
 )
 
 if __name__ == "__main__":
-    riscontro.launch(server_name="0.0.0.0", server_port=8080)
+    riscontro.launch(
+        server_name="0.0.0.0", 
+        server_port=8080,
+        share=False,      # Esplicitiamo che non vogliamo il link pubblico
+        blocked_paths=["/"] # Questo a volte aiuta Gradio a sbloccarsi in Docker
+    )
     #riscontro.launch(share=True)
