@@ -44,11 +44,11 @@ def compute_metrics(eval_pred):
 # configurazione Training (Logica MLOps)
 training_args = TrainingArguments(
     output_dir="./modelli/sentiment_results",
-    eval_strategy="no",                 # Disabilita la valutazione durante il training per risparmiare tempo
-    save_strategy="no",                 # Non salvare file pesanti su disco
-    num_train_epochs=1,                 # Fai solo un passaggio (un'epoca)
-    per_device_train_batch_size=8,      # Aumenta un po' se la RAM lo permette (velocizza la CPU)
-    no_cuda=True                        # Conferma esplicitamente che non usi la GPU
+    eval_strategy="no",
+    save_strategy="no",
+    num_train_epochs=1,
+    per_device_train_batch_size=8,
+    no_cuda=True
 )
 
 # inizializzazione Trainer
