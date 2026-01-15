@@ -1,0 +1,14 @@
+Monitoraggio_Reputazione_Online/
+├── .github/workflows/
+│   └── main.yml
+├── src/
+│   ├── data_train.py
+│   ├── data_catch.py
+│   ├── monitoring.py
+│   └── data_analyzer.py
+├── modelli/
+│   └── final_sentiment_model/
+├── app.py
+├── requirements.txt
+├── schema_logico.txt
+└── architettura.txt
