@@ -41,4 +41,5 @@ riscontro = gr.Interface(
 )
 
 if __name__ == "__main__":
-    riscontro.launch(share=True)
+    riscontro.launch(server_name="0.0.0.0", server_port=8080)
+    #riscontro.launch(share=True)
