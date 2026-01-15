@@ -41,8 +41,5 @@ riscontro = gr.Interface(
 )
 
 if __name__ == "__main__":
-    riscontro.launch(
-        server_name="0.0.0.0", 
-        server_port=8080, 
-        share=True
-    )
+    # Rimuoviamo i parametri fissi e lasciamo che legga l'ambiente
+    riscontro.launch()
