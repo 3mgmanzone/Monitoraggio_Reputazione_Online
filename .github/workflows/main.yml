@@ -1,0 +1,43 @@
+name: MLOps Pipeline - Sentiment Analysis
+
+on:
+  push:
+    branches: [ main ]  # Si attiva quando invii modifiche al ramo principale
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del codice
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Installazione dipendenze
+        run: |
+          pip install -r requirements.txt
+
+      - name: Test di integrazione
+        # Verifichiamo che il modello carichi correttamente prima di fare il deploy
+        run: |
+          python -m pytest tests/
+          
+  deploy-to-huggingface:
+    needs: build-and-test  # Parte solo se i test passano
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push su Hugging Face Spaces
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          # Sostituisci USERNAME e SPACE_NAME con i tuoi dati di Hugging Face
+          git remote add hf https://USERNAME:$HF_TOKEN@huggingface.co/spaces/USERNAME/SPACE_NAME
+          git push --force hf main
