@@ -45,5 +45,6 @@ if __name__ == "__main__":
     riscontro.launch(
         server_name="0.0.0.0",
         server_port=int(os.environ.get("PORT", 8080)),
+        share=True,          # <-- QUESTA è la chiave
         show_error=True
     )
