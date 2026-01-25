@@ -5,7 +5,7 @@ import csv
 from datetime import datetime
 from src.data_analyzer import DataAnalyzer
 
-# inizializzo la Classe Data_Analyzer - il ns motore - una volta per tutte
+# inizializzo la Classe DataAnalyzer
 analyzer = DataAnalyzer()
 CSV_FILE = "riscontri.csv"
 
@@ -24,15 +24,12 @@ def save_to_csv(text, label, score):
 
 # funzione per analizzare il testo inserito e ricavarne il risultato
 def analyze(text):
-    ''' qui richiamo il mio modello con lo scopo di valutazione del testo '''
     res = analyzer.predict(text)
-    # SALVATAGGIO: Qui intercettiamo il dato prima di restituirlo all'utente
     save_to_csv(text, res['label'], res['score'])
     return f"Sentiment: {res['label']} | Confidenza: {res['score']}"
 
 
 # interfaccia grafica per inserimento dei dati
-''' qui utilizzo la funzione ANALYZE di prima per analizzare il commento '''
 riscontro = gr.Interface(
     fn=analyze, 
     inputs=gr.Textbox(placeholder="Inserisci un Commento: ........"), 
