@@ -1,3 +1,23 @@
+ARCHITETTURA - Monitoraggio_Reputazione_Online
+ ┣ 📂 .github/ workflows
+ ┣ 📂 src
+ ┣ 📂 venv
+ ┣ 📜 Dockerfile
+ ┣ 📜 README.md
+ ┣ 📜 app.py
+ ┗ 📜 monitoring.py
+
+
+
+
+
+
+
+
+
+
+
+
 --------    PROGETTO    --------
 
 
