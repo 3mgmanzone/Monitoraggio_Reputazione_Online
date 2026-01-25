@@ -20,7 +20,7 @@ class DataAnalyzer:
             "positive": "Positivo"
         }
 
-    def _preprocess(self, text):
+    def _preprocess(self, text: str):
         # pulizia del testo
         new_text = []
         for t in text.split(" "):
@@ -30,7 +30,7 @@ class DataAnalyzer:
             new_text.append(t)
         return " ".join(new_text)
 
-    def predict(self, text):
+    def predict(self, text: str):
         """Riceve un testo e restituisce sentiment e punteggio di confidenza"""
         # pulizia del testo
         text_cleaned = self._preprocess(text) 
