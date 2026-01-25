@@ -10,7 +10,7 @@ analyzer = DataAnalyzer()
 CSV_FILE = "riscontri.csv"
 
 
-def save_to_csv(text, label, score):
+def save_to_csv(text: str, label: str, score: float):
     # Controlla se il file esiste già per scrivere l'intestazione solo la prima volta
     file_exists = os.path.isfile(CSV_FILE)
     with open(CSV_FILE, mode='a', newline='', encoding='utf-8') as f:
@@ -23,7 +23,7 @@ def save_to_csv(text, label, score):
 
 
 # funzione per analizzare il testo inserito e ricavarne il risultato
-def analyze(text):
+def analyze(text: str):
     res = analyzer.predict(text)
     save_to_csv(text, res['label'], res['score'])
     return f"Sentiment: {res['label']} | Confidenza: {res['score']}"
