@@ -30,7 +30,7 @@ class DataAnalyzer:
             new_text.append(t)
         return " ".join(new_text)
 
-    def predict(self, text: str) -> Dict[str, Any]:
+    def predict(self, text: str) -> dict[str, any]:
         """Riceve un testo e restituisce sentiment e punteggio di confidenza"""
         # pulizia del testo
         text_cleaned = self._preprocess(text) 
