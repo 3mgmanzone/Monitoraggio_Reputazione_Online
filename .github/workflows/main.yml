@@ -38,5 +38,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add hf https://3mgmanzone:$HF_TOKEN@huggingface.co/spaces/3mgmanzone/prog_monitoraggio_aziendale
+          git remote add hf https://3mgmanzone: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@huggingface.co/spaces/3mgmanzone/prog_monitoraggio_aziendale
           git push --force hf main
