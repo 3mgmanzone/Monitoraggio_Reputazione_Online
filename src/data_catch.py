@@ -1,8 +1,8 @@
 
 from datasets import load_dataset
 
+# Istruzioni per dare una sbirciata al DataSet prima di lavorare sul resto del programma
 
-# Carico il dataset prescelto
 dataset = load_dataset("Sp1786/multiclass-sentiment-analysis-dataset")
 
 '''
