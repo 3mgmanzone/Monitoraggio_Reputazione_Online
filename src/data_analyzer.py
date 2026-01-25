@@ -2,7 +2,7 @@
 from transformers import pipeline
 
 class DataAnalyzer:
-    def __init__(self):
+    def __init__(self) -> None:
         # Prendo il modello che mi è stato indicato su HggingFace - inizializzazione
         self.model_name = "cardiffnlp/twitter-roberta-base-sentiment-latest"
                 
@@ -20,7 +20,7 @@ class DataAnalyzer:
             "positive": "Positivo"
         }
 
-    def _preprocess(self, text: str):
+    def _preprocess(self, text: str) -> str:
         # pulizia del testo
         new_text = []
         for t in text.split(" "):
@@ -30,7 +30,7 @@ class DataAnalyzer:
             new_text.append(t)
         return " ".join(new_text)
 
-    def predict(self, text: str):
+    def predict(self, text: str) -> Dict[str, Any]:
         """Riceve un testo e restituisce sentiment e punteggio di confidenza"""
         # pulizia del testo
         text_cleaned = self._preprocess(text) 
