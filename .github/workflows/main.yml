@@ -38,6 +38,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          # Sostituisci USERNAME e SPACE_NAME con i tuoi dati di Hugging Face
-          git remote add hf https://USERNAME:$HF_TOKEN@huggingface.co/spaces/USERNAME/SPACE_NAME
+          git remote add hf https://3mgmanzone:$HF_TOKEN@huggingface.co/spaces/3mgmanzone/prog_monitoraggio_aziendale
           git push --force hf main
