@@ -4,3 +4,4 @@ timestamp,text,label,score
 2026-01-15 01:24:42,it is really awful,negative,0.8983
 2026-01-15 02:19:53,wow great idea,positive,0.9417
 2026-01-25 16:12:21,"this was an awesome service, I felt really lucky",positive,0.9846
+2026-01-25 17:05:47,"horrible experience, I would rather die that repeat it again",negative,0.952
