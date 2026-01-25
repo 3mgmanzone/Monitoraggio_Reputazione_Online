@@ -1,7 +1,7 @@
 
 from transformers import pipeline
 
-class Data_Analyzer:
+class DataAnalyzer:
     def __init__(self):
         # Prendo il modello che mi è stato indicato su HggingFace - inizializzazione
         self.model_name = "cardiffnlp/twitter-roberta-base-sentiment-latest"
@@ -45,7 +45,7 @@ class Data_Analyzer:
 
 '''
 # Ho testato questa parte di codice altrove con queste righe di codice - mi sembra che funzioni
-analyzer = Data_Analyzer()
+analyzer = DataAnalyzer()
 test_text = "I loved it"
 print(analyzer.predict(test_text))
 '''
