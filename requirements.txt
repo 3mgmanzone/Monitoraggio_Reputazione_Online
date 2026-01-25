@@ -8,3 +8,4 @@ scipy
 gradio
 evaluate
 scikit-learn
+pytest
