@@ -1,7 +1,6 @@
 import os
 
 def test_file_existence():
-    """Verifica se i file necessari esistono (esempio base)"""
     assert True 
 
 def test_data_structure():
