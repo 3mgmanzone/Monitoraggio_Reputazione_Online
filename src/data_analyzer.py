@@ -41,11 +41,3 @@ class DataAnalyzer:
             "label": result['label'],
             "score": round(float(result['score']), 4)
         }
-
-
-'''
-# Ho testato questa parte di codice altrove con queste righe di codice - mi sembra che funzioni
-analyzer = DataAnalyzer()
-test_text = "I loved it"
-print(analyzer.predict(test_text))
-'''
