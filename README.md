@@ -16,11 +16,11 @@ L’obiettivo principale è permettere all’azienda di:
 - supportare decisioni basate sui dati raccolti
 
 ## Modello utilizzato
-Per l’analisi del sentiment viene utilizzato il seguente modello pre-addestrato:
+Per l’analisi del sentiment viene utilizzato il seguente modello pre-addestrato:  
 https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
 
 ## Dataset utilizzato
-Il modello viene addestrato e testato utilizzando un dataset pubblico:
+Il modello viene addestrato e testato utilizzando un dataset pubblico:  
 https://huggingface.co/datasets/Sp1786/multiclass-sentiment-analysis-dataset
 
 ## Requisiti di installazione
