@@ -3,7 +3,7 @@ from datasets import load_dataset
 
 
 # Carico il dataset prescelto
-df = load_dataset("Sp1786/multiclass-sentiment-analysis-dataset")
+dataset = load_dataset("Sp1786/multiclass-sentiment-analysis-dataset")
 
 '''
 ho visto tramite la pagina web ed uno script a parte che il DataSet ha queste caratteristiche:
