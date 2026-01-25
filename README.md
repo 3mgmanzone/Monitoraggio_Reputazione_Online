@@ -36,6 +36,5 @@ Tutte le librerie necessarie all’esecuzione del progetto sono elencate nel fil
 ├── test_df.csv         # Dataset utilizzato per il test
 └── train_df.csv        # Dataset utilizzato per il training
 src/
-├── data_catch.py       # Analisi preliminare del dataset
 ├── data_train.py       # Addestramento del modello di sentiment analysis
-├── data_analyzer.py    # Analisi del sentiment sui dati
+└── data_analyzer.py    # Analisi del sentiment sui dati
