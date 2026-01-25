@@ -16,7 +16,7 @@ dataset = load_dataset('csv', data_files={
     'train': 'train_df.csv',
     'test': 'test_df.csv'
 })
-# Prendi solo un piccolo campione per velocizzare il test
+# Prendo solo un piccolo campione per velocizzare il test
 dataset['train'] = dataset['train'].shuffle(seed=42).select(range(200))
 dataset['test'] = dataset['test'].shuffle(seed=42).select(range(50))
 
