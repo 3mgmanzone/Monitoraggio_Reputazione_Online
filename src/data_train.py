@@ -24,7 +24,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=3)
 
 # pre-processing
-def tokenize_function(examples):
+def tokenize_function(examples: Dict[str, Any]) -> Dict[str, Any]:
     # Convertiamo ogni elemento in stringa per evitare valori None/NaN
     texts = [str(t) if t is not None else "" for t in examples["text"]]
     return tokenizer(texts, truncation=True, padding="max_length", max_length=128)
@@ -33,7 +33,7 @@ tokenized_datasets = dataset.map(tokenize_function, batched=True)
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 # metriche di valutazione
-def compute_metrics(eval_pred):
+def compute_metrics(eval_pred: EvalPrediction) -> Dict[str, float]:
     logits, labels = eval_pred
     # Prende la categoria con il punteggio più alto
     predictions = np.argmax(logits, axis=-1)
