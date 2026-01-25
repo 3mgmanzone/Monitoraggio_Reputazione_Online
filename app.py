@@ -3,10 +3,10 @@ import gradio as gr
 import os
 import csv
 from datetime import datetime
-from src.data_analyzer import Data_Analyzer
+from src.data_analyzer import DataAnalyzer
 
 # inizializzo la Classe Data_Analyzer - il ns motore - una volta per tutte
-analyzer = Data_Analyzer()
+analyzer = DataAnalyzer()
 CSV_FILE = "riscontri.csv"
 
 
